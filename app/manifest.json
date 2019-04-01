@@ -1,0 +1,19 @@
+{
+  "name": "__site_name__",
+  "short_name": "__short_name__",
+  "icons": [
+    {
+      "src": "images/favicons/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "images/favicons/favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "__theme_color__",
+  "background_color": "__background_color__",
+  "display": "standalone"
+}

@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="__lang__">
+<!-- uncomment here to use Open Graph for fb and twitter -->
+<!--<head prefix="og: http://ogp.me/ns#">-->
+<head>
+  <meta charset="utf-8">
+  <title>__page_name__ | __site_name__</title>
+  <meta name="description" content="__description__">
+
+  <!-- For mobile display-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Classic desktop browsers -->
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
+  <link rel="shortcut icon" href="images/favicons/favicon-48x48.png">
+
+  <!-- iOS Safari Icon -->
+  <link rel="apple-touch-icon" href="images/favicons/favicon-180x180.png">
+  <!-- ref: https://stackoverflow.com/questions/2997437/what-size-should-apple-touch-favicon-png-be-for-ipad-and-iphone -->
+  <!-- optional -->
+  <link rel="apple-touch-icon" sizes="57x57" href="images/favicons/favicon-57x57.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="images/favicons/favicon-76x76.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="images/favicons/favicon-120x120.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="images/favicons/favicon-152x152.png">
+  <link rel="apple-touch-icon" sizes="167x167" href="images/favicons/favicon-167x167.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/favicon-180x180.png">
+
+  <!-- Microsoft Tile Info -->
+  <meta name="application-name" content="__site_name__"/>
+  <meta name="msapplication-TileColor" content="__background_color__"/>
+  <meta name="msapplication-config" content="borwserconfig.xml" />
+
+  <!-- Nav Bar Color -->
+  <meta name="theme-color" content="__theme_color__">
+
+  <!--For Better SEO-->
+  <meta name="publisher" content="__publisher_name__">
+  <meta name="author" content="__author_name__">
+
+  <!-- Android Chrome -->
+  <link rel="manifest" href="/manifest.json">
+
+  <!-- OPEN GRAPH(Facebook) -->
+  <!--
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="__page_name__ | __site_name__">
+  <meta property="og:site_name" content="__site_name__">
+  <meta property="og:url" content="Your Site URL">
+  <meta property="og:description" content="__description__">
+  <meta property="og:image" content="__image_url__">
+  -->
+  <!-- OPEN GRAPH(TWITTER) -->
+  <!--
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="__twitter_account__">
+  <meta name="twitter:title" content="__page_name__ | __site_name__">
+  <meta name="twitter:description" content="__description__">
+  <meta name="twitter:image" content="__image_url__">
+  -->
+
+  <!-- For no-index page -->
+  <!--<meta name="robots" content="noindex,nofollow">-->
+
+  <!-- For multi-language page -->
+  <!--<link rel="alternate" hreflang="" href="">-->
+
+  <!-- For dns prefetch -->
+  <!-- <link rel="dns-prefetch" href="//fonts.googleapis.com"> -->
+
+  <!-- For canonical page -->
+  <!--<link rel="canonical" href="">-->
+
+  <!-- JSON-LD sample -->
+  <!--
+  See detail:
+  https://search.google.com/structured-data/testing-tool/u/0/
+  {
+    "@context": "http://schema.org/",
+    "@type": "Person",
+    "name": "Taro Yamada",
+    "jobTitle": "Professor",
+    "telephone": "(425) 123-4567",
+    "url": "http://www.janedoe.com"
+  }
+
+  -->
+
+
+  <!-- Google Tag Manager -->
+  <!--
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+  -->
+  <!-- End Google Tag Manager -->
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+      window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+      ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</head>
+
+<body>
+<!-- Google Tag Manager (noscript) -->
+<!--
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+-->
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- Above-the-fold Style -->
+<!-- See https://developers.google.com/speed/docs/insights/PrioritizeVisibleContent -->
+<style>
+  /* your minimal style here. */
+</style>
+<!-- Above-the-fold Style End -->
+<!--[if IE]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+<![endif]-->
+
+<!-- Add your site or application content here -->
+<p>Hello world! This is HTML5 Boilerplate.</p>
+
+<!-- Async CSS files -->
+<link rel="preload" href="styles/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="styles/main.css"></noscript>
+<script>
+    /*! loadCSS rel=preload polyfill. [c]2017 Filament Group, Inc. MIT License */
+    /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+    !function(e){"use strict";var t=function(t,n,r,o){var i,a=e.document,d=a.createElement("link");if(n)i=n;else{var f=(a.body||a.getElementsByTagName("head")[0]).childNodes;i=f[f.length-1]}var l=a.styleSheets;if(o)for(var s in o)o.hasOwnProperty(s)&&d.setAttribute(s,o[s]);d.rel="stylesheet",d.href=t,d.media="only x",function e(t){if(a.body)return t();setTimeout(function(){e(t)})}(function(){i.parentNode.insertBefore(d,n?i:i.nextSibling)});var u=function(e){for(var t=d.href,n=l.length;n--;)if(l[n].href===t)return e();setTimeout(function(){u(e)})};function c(){d.addEventListener&&d.removeEventListener("load",c),d.media=r||"all"}return d.addEventListener&&d.addEventListener("load",c),d.onloadcssdefined=u,u(c),d};"undefined"!=typeof exports?exports.loadCSS=t:e.loadCSS=t}("undefined"!=typeof global?global:this);
+</script>
+<!-- Add Javascripts -->
+<script src="scripts/modernizr.js" defer></script>
+<script src="scripts/main.js" defer></script>
+</body>
+</html>

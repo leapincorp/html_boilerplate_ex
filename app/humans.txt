@@ -1,0 +1,19 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+/* TEAM */
+# Original developer: __author_name__
+# Twitter: __twitter_account__
+
+/* THANKS */
+# Node
+# Gulp
+# Sass
+
+/* SITE */
+Standards: HTML5, CSS3, ES2015
+Components: jQuery, Normalize.css
+# Softwares: SublimeText
+
+/* NOTE */
+# Something to say.

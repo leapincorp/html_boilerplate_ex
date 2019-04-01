@@ -1,0 +1,14 @@
+[
+  [ "__lang__", "en" ],
+  [ "__site_name__", "Your Site Name" ],
+  [ "__short_name__", "Site Short Name" ],
+  [ "__site_url__", "Your Site URL" ],
+  [ "__theme_color__", "#0046FF" ],
+  [ "__background_color__", "#ffffff" ],
+  [ "__publisher_name__", "Your Organization" ],
+  [ "__author_name__", "Your Name" ],
+  [ "__page_name__", "Page Name" ],
+  [ "__description__", "Description" ],
+  [ "__image_url__", "Image URL" ],
+  [ "__twitter_account__", "@twitter_account" ]
+]
