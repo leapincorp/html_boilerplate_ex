@@ -1,0 +1,21 @@
+image: node:10.15.0
+pipelines:
+  default:
+    - step:
+        script:
+          - yarn
+          - npm test
+  tags:                         # add the 'tags' section
+    release-*:                  # specify the tag
+      - step:                   # define the build pipeline for the tag
+          name: Build and release
+          script:
+            - yarn
+            - npm test
+            - npm run serve:dist
+  branches:
+    staging:
+      - step:
+          name: Clone
+          script:
+            - echo "Clone all the things!"

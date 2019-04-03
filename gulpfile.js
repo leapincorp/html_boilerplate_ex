@@ -136,8 +136,8 @@ function lintTest() {
 function html() {
     return src(`${dirs.app}/*.html`)
         .pipe($.useref({searchPath: [dirs.tmp, dirs.app, '.']}))
-        .pipe($.if(/\.js$/, $.uglify({compress: {drop_console: true}})))
-        .pipe($.if(/\.css$/, $.postcss([cssnano({safe: true, autoprefixer: false})])))
+        .pipe($.if(/\.scripts/, $.uglify({compress: {drop_console: true}})))
+        .pipe($.if(/\.styles/, $.postcss([cssnano({safe: true, autoprefixer: false})])))
         .pipe($.if(/\.html$/, $.htmlmin({
             collapseWhitespace: true,
             minifyCSS: true,

@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="__lang__">
+<html lang="en">
 <!-- uncomment here to use Open Graph for fb and twitter -->
 <!--<head prefix="og: http://ogp.me/ns#">-->
 <head>
   <meta charset="utf-8">
-  <title>__page_name__ | __site_name__</title>
-  <meta name="description" content="__description__">
+  <title>Page Name | Your Site Name</title>
+  <meta name="description" content="Description">
 
   <!-- For mobile display-->
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -27,16 +27,16 @@
   <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/favicon-180x180.png">
 
   <!-- Microsoft Tile Info -->
-  <meta name="application-name" content="__site_name__"/>
-  <meta name="msapplication-TileColor" content="__background_color__"/>
+  <meta name="application-name" content="Your Site Name"/>
+  <meta name="msapplication-TileColor" content="#ffffff"/>
   <meta name="msapplication-config" content="borwserconfig.xml" />
 
   <!-- Nav Bar Color -->
-  <meta name="theme-color" content="__theme_color__">
+  <meta name="theme-color" content="#0046FF">
 
   <!--For Better SEO-->
-  <meta name="publisher" content="__publisher_name__">
-  <meta name="author" content="__author_name__">
+  <meta name="publisher" content="Your Organization">
+  <meta name="author" content="Your Name">
 
   <!-- Android Chrome -->
   <link rel="manifest" href="/manifest.json">
@@ -44,19 +44,19 @@
   <!-- OPEN GRAPH(Facebook) -->
   <!--
   <meta property="og:type" content="website">
-  <meta property="og:title" content="__page_name__ | __site_name__">
-  <meta property="og:site_name" content="__site_name__">
+  <meta property="og:title" content="Page Name | Your Site Name">
+  <meta property="og:site_name" content="Your Site Name">
   <meta property="og:url" content="Your Site URL">
-  <meta property="og:description" content="__description__">
-  <meta property="og:image" content="__image_url__">
+  <meta property="og:description" content="Description">
+  <meta property="og:image" content="Image URL">
   -->
   <!-- OPEN GRAPH(TWITTER) -->
   <!--
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="__twitter_account__">
-  <meta name="twitter:title" content="__page_name__ | __site_name__">
-  <meta name="twitter:description" content="__description__">
-  <meta name="twitter:image" content="__image_url__">
+  <meta name="twitter:site" content="@twitter_account">
+  <meta name="twitter:title" content="Page Name | Your Site Name">
+  <meta name="twitter:description" content="Description">
+  <meta name="twitter:image" content="Image URL">
   -->
 
   <!-- For no-index page -->
@@ -126,16 +126,69 @@
 <!-- Add your site or application content here -->
 <p>Hello world! This is HTML5 Boilerplate.</p>
 
-<!-- Async CSS files -->
-<link rel="preload" href="styles/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="styles/main.css"></noscript>
+<!--
+Async CSS files
+- dont't remove "build:css styles/**.css". it's a kind of annotation for gulp-useref.
+  See more: https://github.com/jonkemp/gulp-useref
+- uncomment link tag for bootstrap usage
+-->
+<!-- build:css styles/vendor.css rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" -->
+<!--<link href="styles/main.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">-->
+<!-- endbuild -->
+<!-- uncomment here for bootstrap usage
+<noscript><link rel="stylesheet" href="styles/vendor.css"></noscript>
 <script>
     /*! loadCSS rel=preload polyfill. [c]2017 Filament Group, Inc. MIT License */
     /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
     !function(e){"use strict";var t=function(t,n,r,o){var i,a=e.document,d=a.createElement("link");if(n)i=n;else{var f=(a.body||a.getElementsByTagName("head")[0]).childNodes;i=f[f.length-1]}var l=a.styleSheets;if(o)for(var s in o)o.hasOwnProperty(s)&&d.setAttribute(s,o[s]);d.rel="stylesheet",d.href=t,d.media="only x",function e(t){if(a.body)return t();setTimeout(function(){e(t)})}(function(){i.parentNode.insertBefore(d,n?i:i.nextSibling)});var u=function(e){for(var t=d.href,n=l.length;n--;)if(l[n].href===t)return e();setTimeout(function(){u(e)})};function c(){d.addEventListener&&d.removeEventListener("load",c),d.media=r||"all"}return d.addEventListener&&d.addEventListener("load",c),d.onloadcssdefined=u,u(c),d};"undefined"!=typeof exports?exports.loadCSS=t:e.loadCSS=t}("undefined"!=typeof global?global:this);
 </script>
-<!-- Add Javascripts -->
+-->
+<!-- build:css styles/main.css rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'"-->
+<link href="styles/main.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<!-- endbuild -->
+<noscript><link rel="stylesheet" href="styles/main.css"></noscript>
+<script>
+    (function () {
+        // get browser link support attributes
+        var supports = ("onpreload" in document.create("link"));
+
+        // end if browser support preload attribute
+        if(supports) return;
+
+        //
+        requestAnimationFrame(function () {
+            var l = document.querySelectorAll('link[rel="preload"]');
+            l.rel = 'stylesheet';
+            l.href = href;
+            l.media = media || "all";
+            var ref = document.querySelector('#lazy-load-' + handle + '-css');
+            var parent = ref.parentNode;
+            parent.insertBefore(l, ref);
+            if (handle === "leapin-stylesheet") {
+                var fi = setInterval(function () {
+                    if (!!l.sheet && l.sheet.cssRules.length) {
+                        LEAPIN_MODs.lp_style_loaded = true;
+                        clearInterval(fi);
+                    }
+                }, 30);
+            }
+        });
+    }());
+</script>
+<!--
+Add Javascripts
+- uncomment script tag below to use bootstrap
+- dont't remove "build:js scripts/**.js". it's a kind of annotation for gulp-useref.
+  See more: https://github.com/jonkemp/gulp-useref
+-->
+<!-- build:js scripts/vendor.js -->
+<!--<script type="text/javascript" src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>-->
+<!-- endbuild -->
+
+<!-- build:js scripts/main.js -->
 <script src="scripts/modernizr.js" defer></script>
 <script src="scripts/main.js" defer></script>
+<!-- endbuild -->
+
 </body>
 </html>

@@ -12,6 +12,6 @@ const init = () => {
     console.log('Allo Allo!');
 };
 
-document.addEventListener("DOMContentLoaded", e => {
+document.addEventListener('DOMContentLoaded', event => {
     init();
 });

@@ -2,8 +2,8 @@
 # The humans responsible & technology colophon
 
 /* TEAM */
-# Original developer: __author_name__
-# Twitter: __twitter_account__
+# Original developer: Your Name
+# Twitter: @twitter_account
 
 /* THANKS */
 # Node

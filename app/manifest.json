@@ -1,6 +1,6 @@
 {
-  "name": "__site_name__",
-  "short_name": "__short_name__",
+  "name": "Your Site Name",
+  "short_name": "Site Short Name",
   "icons": [
     {
       "src": "images/favicons/favicon-192x192.png",
@@ -13,7 +13,7 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "__theme_color__",
-  "background_color": "__background_color__",
+  "theme_color": "#0046FF",
+  "background_color": "#ffffff",
   "display": "standalone"
 }
