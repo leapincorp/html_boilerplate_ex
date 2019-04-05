@@ -12,7 +12,7 @@ pipelines:
           script:
             - yarn
             - npm test
-            - npm run serve:dist
+            - npm run build
   branches:
     staging:
       - step:

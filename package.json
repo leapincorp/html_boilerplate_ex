@@ -45,7 +45,7 @@
   "scripts": {
     "setup:info": "gulp setupInfo",
     "setup:icon": "gulp setupIcon",
-    "serve:test": "cross-env NODE_ENV=test gulp serve",
+    "serve:test": "cross-env NODE_ENV=test gulp serve --browser false",
     "serve:dist": "cross-env NODE_ENV=production gulp serve",
     "start": "gulp serve",
     "build": "cross-env NODE_ENV=production gulp",

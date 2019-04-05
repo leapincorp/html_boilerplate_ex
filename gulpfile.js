@@ -14,6 +14,7 @@ const $ = gulpLoadPlugins();
 // browser sync proxy
 const server = browserSync.create();
 const port = argv.port || 9000;
+const browser = argv.browser || true;
 // config
 const pkg = require('./package.json');
 const dirs = pkg['gulp-configs'].directories;
@@ -196,6 +197,7 @@ function startAppServer() {
     server.init({
         notify: false,
         port,
+        open: browser,
         server: {
             baseDir: [dirs.tmp, dirs.app],
             routes: {
@@ -221,6 +223,7 @@ function startTestServer() {
         notify: false,
         port,
         ui: false,
+        open: browser,
         server: {
             baseDir: dirs.test,
             routes: {
